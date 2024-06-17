@@ -21,11 +21,11 @@
 	
 
 
-"hyprland/workspaces": {
+/* "hyprland/workspaces": {
   "disable-scroll": false,
   "on-scroll-up": "hyprctl dispatch workspace -1",
   "on-scroll-down": "hyprctl dispatch workspace +1",
-  /*"format": "{icon}",
+  "format": "{icon}",
   "format-icons": {
     "1": "一",
     "2": "二",
@@ -37,11 +37,23 @@
     "8": "八",
     "9": "九",
     "10": "十"
-  },*/
+  },
   "persistent-workspaces": {
     "*": 10
   }
+}, */
+
+"hyprland/workspaces": {
+  "disable-scroll": false,
+  "all-outputs": true,
+  "active-only": false,
+  "on-click": "activate",
+  "on-scroll-up": "hyprctl dispatch workspace -1",
+  "on-scroll-down": "hyprctl dispatch workspace +1",
+  "persistent-workspaces": {
+  }
 },
+
 
     "custom/playerctl": {
       "format": "{icon}   ::  <span>{}</span>",
@@ -212,7 +224,7 @@
   "on-click-right": "pavucontrol",  // Custom script for microphone settings
   "on-scroll-up": "pamixer --default-source --increase 5",  // Increase microphone volume
   "on-scroll-down": "pamixer --default-source --decrease 5",  // Decrease microphone volume
-  "tooltip-format": "{volume}%"
+  "tooltip-format": "{source_volume}%"
   
 },
 "pulseaudio#output": {
